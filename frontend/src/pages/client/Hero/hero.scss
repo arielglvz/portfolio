@@ -1,0 +1,66 @@
+@use '../../../styles/variables.scss' as *;
+
+.hero {
+
+  &__text {
+    
+  }
+
+  &__subheading {
+    margin-left: 1rem;
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: 15vw;
+    color: $grey;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  &__social {
+    width: 120px;
+    height: 45px;
+    border: 1px solid #000000;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    > a {
+      text-decoration: none;
+      font-size: .7rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__creators {
+    text-align: right;
+
+    // @include breakpoint-down(small) {
+    //   width: 100%;
+    // }
+
+    // @include breakpoint-down(medium) {
+    //   text-align: left;
+    //   font-size: .7rem;
+    // }
+
+    > .designed-by {
+      white-space: nowrap;
+    }
+    
+    > .developed-by {
+      white-space: nowrap;
+    }
+  }
+}

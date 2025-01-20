@@ -1,0 +1,25 @@
+@use './styles/variables.scss' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: $primary; // Using the namespace for the variable
+}
+
+.container {
+  padding: 50px 30px;
+
+  &--no-pt {
+    padding-top: 0;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
