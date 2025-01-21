@@ -1,0 +1,79 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.projects {
+  &__project {
+  }
+
+  &__project-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;   
+    gap: 1rem;
+    
+    @include breakpoint-down(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: unset;
+    }
+  }
+  
+  &__project-content {
+    padding: 1rem;
+  }
+
+  &__project-item {
+    display: grid;
+    height: 467px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+
+    > img {
+      width: 100%;
+      height: 260px;;
+    }
+
+    @include breakpoint-down(small) {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      } 
+    }
+  }
+
+  &___item-title,
+  &___item-description {
+    margin-bottom: 0.5rem;
+  }
+
+  &__tech-stack {
+    margin-bottom: 2rem;
+  }
+
+  &__item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__item-link {
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    > a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $primary;
+    }
+  }
+}

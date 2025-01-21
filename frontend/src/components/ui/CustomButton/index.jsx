@@ -1,12 +1,14 @@
 import React from 'react'
 import './custom-btn.scss'
 
-const CustomButton = ({ label = 'label here' }) => {
+const CustomButton = ({ label = 'label here', link }) => {
   return (
     <div className='custom-btn'>
-      <p className='custom-btn--border'>{label}</p>
+      <a href={link} target='_blank' rel='noreferrer'>
+        <p className='custom-btn--border'>{label}</p>
+      </a>
     </div>
   )
 }
 
-export default CustomButton
+export default CustomButton;

@@ -1,4 +1,5 @@
 @use './styles/variables.scss' as *;
+@use './styles/mixins.scss' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -9,7 +10,24 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+}
+
+body { 
   color: $primary; // Using the namespace for the variable
+ 
+  @include breakpoint-down(small) {
+    min-width: 375px;
+    
+    h1 {
+      font-size: 29vw; // Adjust font-size for larger screens 
+    }
+  } 
+  
+  @include breakpoint-up(medium) {
+    h1 {
+      font-size: 15vw; // Adjust font-size for larger screens 
+    }
+  } 
 }
 
 .container {
@@ -22,4 +40,9 @@
 
 .bold {
   font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: $primary;
 }

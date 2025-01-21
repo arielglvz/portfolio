@@ -1,13 +1,20 @@
 import React from 'react'
 import Header from '../../components/Header'
 import Hero from './Hero'
+import Technology from './Technology'
+import Projects from './Projects'
+import Footer from './Footer'
 
 const ClientPage = () => {
   return (
-    <div>
+    <>
       <Header />
       <Hero />
-    </div>
+      <Technology />
+      <Projects />
+      <hr />
+      <Footer />
+    </>
   )
 }
 

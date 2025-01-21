@@ -1,66 +1,72 @@
 @use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
 
 .hero {
 
   &__text {
+    margin-bottom: 8rem;
+    user-select: none;
     
+    @include breakpoint-down(small) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__subheading {
     margin-left: 1rem;
     font-weight: 600;
+    color: $primary;
+
+    @include breakpoint-down(small) {
+      margin-left: unset;
+      font-size: 12px;
+    }
   }
 
   &__title {
-    font-size: 15vw;
-    color: $grey;
+    // color: $grey;
+    color: $primary;
+    text-shadow: 19px -11px 10px #7e727169;
+  
   }
 
   &__bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoint-down(small) {
+      flex-direction: column;
+    }
   }
 
   &__socials {
     display: flex;
     gap: 1rem;
     list-style: none;
-  }
 
-  &__social {
-    width: 120px;
-    height: 45px;
-    border: 1px solid #000000;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-
-    > a {
-      text-decoration: none;
-      font-size: .7rem;
-      text-transform: uppercase;
+    @include breakpoint-down(small) {
+      margin-bottom: 2rem;
     }
   }
 
   &__creators {
     text-align: right;
 
-    // @include breakpoint-down(small) {
-    //   width: 100%;
-    // }
-
-    // @include breakpoint-down(medium) {
-    //   text-align: left;
-    //   font-size: .7rem;
-    // }
+    @include breakpoint-down(small) {
+      width: 100%;
+      font-size: 12px;
+      text-align: center;
+    }
 
     > .designed-by {
       white-space: nowrap;
+      color: $secondary;
     }
     
     > .developed-by {
       white-space: nowrap;
+      color: $primary;
     }
   }
 }

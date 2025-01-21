@@ -1,0 +1,53 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $secondary;
+  &__brand {
+    flex: 1;
+    color: $tertiary;
+
+    @include breakpoint-down(small) {
+      font-size: 3rem;
+    }
+  }
+  &__contact {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    @include breakpoint-down(small) {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: .5rem;
+    }
+  }
+  
+  &__number,
+  &__email {
+    padding: 0 1rem;
+    white-space: nowrap;
+    color: $tertiary;
+  }
+  
+  &__socials {
+    padding: 0 1rem;
+    display: flex;
+    gap: 1.5rem;
+    
+    > a {
+      > .icon {
+        color: $tertiary;
+        font-size: 2rem;
+
+        @include breakpoint-down(small) {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

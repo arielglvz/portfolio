@@ -1,21 +1,8 @@
 import React from 'react'
 import './hero.scss'
-
+import CustomButton from '../../../components/ui/CustomButton'
+import { socials } from '../../../StaticData'
 const Hero = () => {
-  const socials =  [
-    {
-      "label": "github",
-      "link": "https://github.com/arielglvz"
-    },
-    {
-      "label": "linkedin",
-      "link": "https://www.linkedin.com/in/arielglvz/"
-    },
-    {
-      "label": "gmail",
-      "link": "arielglvz@gmail.com"
-    }
-  ]
 
   return (
     <div className='hero container'>
@@ -24,11 +11,9 @@ const Hero = () => {
         <h1 className='hero__title'>LET&#x0027;S TALK</h1>
       </div>
       <div className="hero__bottom">
-        <ul className="hero__socials container">
+        <ul className="hero__socials">
           { socials.map((social, index) => (
-            <li key={index} className="hero__social">
-              <a href={social.link} target="_blank" rel="noreferrer"> {social.label} </a>
-            </li>
+            <CustomButton key={index} label={social.label} link={social.link}/>
           ))}  
         </ul>
         <div className="hero__creators">
