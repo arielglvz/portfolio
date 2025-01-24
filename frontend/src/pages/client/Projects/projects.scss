@@ -52,14 +52,26 @@
     margin-bottom: 0.5rem;
   }
 
+  &___item-description {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
   &__tech-stack {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__stacks {
+    font-weight: 400;
   }
 
   &__item-details {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 12px;
   }
   
   &__item-link {
@@ -76,4 +88,19 @@
       border-bottom: 2px solid $primary;
     }
   }
+
+ &:hover {
+  cursor: pointer;
+
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1);
+    box-shadow: 0 10px 20px #4444;
+  }
+
+  .card:not(:hover) {
+    // filter: blur(4px);
+    transform: scale(0.9, 0.9);
+  }
+ }
 }

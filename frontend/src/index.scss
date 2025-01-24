@@ -12,6 +12,12 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html,
+body {
+  overflow: auto;
+  // overflow-y: scroll;
+}
+
 body { 
   color: $primary; // Using the namespace for the variable
  

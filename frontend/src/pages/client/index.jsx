@@ -8,7 +8,7 @@ import Footer from './Footer'
 const ClientPage = () => {
   return (
     <>
-      <Header />
+      <Header left='&copy; 2024' right='LOGIN'/>
       <Hero />
       <Technology />
       <Projects />
