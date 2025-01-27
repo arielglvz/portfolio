@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import './App.scss'
 import { RouterProvider } from 'react-router-dom';
-import app from './firebaseConfig'
+import { app } from './firebaseConfig'
 import { getDatabase, ref, get } from 'firebase/database'
 import { useDispatch, useSelector } from 'react-redux';
 import { SetPortfolioData } from './redux/rootSlice';
@@ -39,8 +39,6 @@ function App() {
   useEffect(() => {
     getPortfolioData()
   }, [])
-
-  console.log('App: ', portfolioData)
 
   return <RouterProvider router={router}/> 
 }

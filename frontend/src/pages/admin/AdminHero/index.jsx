@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 
 // Firebase:
-import app from '../../../firebaseConfig'
+import { app } from '../../../firebaseConfig'
 import { getDatabase, ref, set } from 'firebase/database'
 import dayjs from 'dayjs';
 
@@ -48,7 +48,7 @@ const AdminHero = () => {
 
   const initialValues = {
     ...data,
-    yearCreated: dayjs().set('year', portfolioData[0]?.content.hero?.yearCreated),
+    yearCreated: currYear,
   }
 
   const overwriteData = async (values) => {

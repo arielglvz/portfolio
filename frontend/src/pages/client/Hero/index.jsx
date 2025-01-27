@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import './hero.scss'
 import CustomButton from '../../../components/ui/CustomButton'
 
 const Hero = () => {
   const { portfolioData } = useSelector((state) => state.root);
-  
+
   if(!portfolioData) {
     return <p>loading...</p>
   }
+
   const { firstName, lastName, welcomeText, caption, yearCreated, socials } = portfolioData[0].content.hero;
   
+
   return (
     <div className='hero container'>
       <div className='hero__text'>

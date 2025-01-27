@@ -6,6 +6,7 @@ import WriteComponent from './Write';
 import ReadComponent from './Read';
 import UpdateReadComponent from './UpdateRead';
 import UpdateWriteComponent from './UpdateWrite';
+import AdminTech from './AdminTech';
 
 const AdminPage = () => {
   const items = [
@@ -16,21 +17,26 @@ const AdminPage = () => {
     },
     {
       key: '2',
+      label: 'Upload Test',
+      children: <AdminTech />
+    },
+    {
+      key: '3',
       label: 'Write',
       children: <WriteComponent />,
     },
     {
-      key: '3',
+      key: '4',
       label: 'Read',
       children: <ReadComponent />,
     },
     {
-      key: '4',
+      key: '5',
       label: 'Update Read',
       children: <UpdateReadComponent />,
     },
     {
-      key: '5',
+      key: '6',
       label: 'Update Write',
       children: <UpdateWriteComponent />,
     },
